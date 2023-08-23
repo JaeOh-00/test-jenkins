@@ -24,7 +24,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        deploy adapters: [tomcat9(credentialsId: 'admin', url: 'https://github.com/JaeOh-00/test-jenkins.git')], contextPath: null, war: '~/0822/'
+        deploy adapters: [tomcat9(credentialsId: 'admin', url: 'https://github.com/JaeOh-00/test-jenkins.git')], contextPath: null, war: '/var/lib/jenkins/workspace/maven_project/target'
       }
     }
   }
